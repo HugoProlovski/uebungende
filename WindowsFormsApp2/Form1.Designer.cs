@@ -29,7 +29,7 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            this.liSchueler = new System.Windows.Forms.ListView();
+            this.liwSchueler = new System.Windows.Forms.ListView();
             this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Vorname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Strasse = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -57,9 +57,9 @@ namespace WindowsFormsApp2
             this.bnNeuerSchueler = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // liSchueler
+            // liwSchueler
             // 
-            this.liSchueler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.liwSchueler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Name,
             this.Vorname,
             this.Strasse,
@@ -67,17 +67,16 @@ namespace WindowsFormsApp2
             this.Ort,
             this.Tel,
             this.Geburtstag});
-            this.liSchueler.FullRowSelect = true;
-            this.liSchueler.GridLines = true;
-            this.liSchueler.HideSelection = false;
-            this.liSchueler.Location = new System.Drawing.Point(281, 205);
-            this.liSchueler.MultiSelect = false;
-            this.liSchueler.Name = "liSchueler";
-            this.liSchueler.Size = new System.Drawing.Size(424, 233);
-            this.liSchueler.TabIndex = 0;
-            this.liSchueler.UseCompatibleStateImageBehavior = false;
-            this.liSchueler.View = System.Windows.Forms.View.Details;
-            this.liSchueler.SelectedIndexChanged += new System.EventHandler(this.liSchueler_SelectedIndexChanged);
+            this.liwSchueler.FullRowSelect = true;
+            this.liwSchueler.GridLines = true;
+            this.liwSchueler.HideSelection = false;
+            this.liwSchueler.Location = new System.Drawing.Point(281, 205);
+            this.liwSchueler.MultiSelect = false;
+            this.liwSchueler.Name = "liwSchueler";
+            this.liwSchueler.Size = new System.Drawing.Size(424, 233);
+            this.liwSchueler.TabIndex = 0;
+            this.liwSchueler.UseCompatibleStateImageBehavior = false;
+            this.liwSchueler.View = System.Windows.Forms.View.Details;
             // 
             // Name
             // 
@@ -281,9 +280,9 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.liSchueler);
-            this.Name = "Form1";
+            this.Controls.Add(this.liwSchueler);
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,7 +290,7 @@ namespace WindowsFormsApp2
 
         #endregion
 
-        private System.Windows.Forms.ListView liSchueler;
+        private System.Windows.Forms.ListView liwSchueler;
         private System.Windows.Forms.ColumnHeader Name;
         private System.Windows.Forms.ColumnHeader Vorname;
         private System.Windows.Forms.ColumnHeader Strasse;
