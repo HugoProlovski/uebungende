@@ -79,7 +79,7 @@ namespace WindowsFormsApp2
             ShowList();
         }
 
-        private void liwSchueler_Click(Object sender, EventArgs e)
+        private void liwSchueler_Click(Object sender, EventArgs e)                //BROKEN COCK
         {
             int iSelIndex = liwSchueler.SelectedIndices[0];
             schueler EinSchueler = TSE2.GetSchueler(iSelIndex);
