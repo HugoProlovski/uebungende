@@ -45,7 +45,7 @@ namespace WindowsFormsApp2
 
         private void liSchueler_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            hallo warum geht das netz
         }
     }
 }
