@@ -25,7 +25,7 @@ namespace WindowsFormsApp2
             liwSchueler.Items.Clear();
             for (int i = 0; i < TSE2.anzahlSchueler; i++)
             {
-                schueler EinSchueler = TSE2.GetSchueler(i);
+                Schueler EinSchueler = TSE2.GetSchueler(i);
                 
                 ListViewItem lwItem = new ListViewItem(EinSchueler.Name);
                 lwItem.SubItems.Add(EinSchueler.Vorname);
@@ -57,7 +57,7 @@ namespace WindowsFormsApp2
             if (liwSchueler.SelectedItems.Count == 1)
             {
                 int iSelIndex = liwSchueler.SelectedIndices[0];
-                schueler EinSchueler = TSE2.GetSchueler(iSelIndex);
+                Schueler EinSchueler = TSE2.GetSchueler(iSelIndex);
 
                 EinSchueler.Name = textBox1.Text;
                 EinSchueler.Vorname = textBox2.Text;
@@ -79,22 +79,31 @@ namespace WindowsFormsApp2
             ShowList();
         }
 
-        private void liwSchueler_Click(Object sender, EventArgs e)                //BROKEN COCK
+        private void liwSchueler_Click(Object sender, EventArgs e)
         {
-            int iSelIndex = liwSchueler.SelectedIndices[0];
-            schueler EinSchueler = TSE2.GetSchueler(iSelIndex);
+            if (liwSchueler.SelectedItems.Count == 1)
+            {
+                int iSelIndex = liwSchueler.SelectedIndices[0];
+                Schueler EinSchueler = TSE2.GetSchueler(iSelIndex);
 
-            textBox1.Text = EinSchueler.Name;
-            textBox2.Text = EinSchueler.Vorname;
-            textBox3.Text = EinSchueler.Strasse;
-            textBox7.Text = EinSchueler.Hausnummer;
-            textBox4.Text = EinSchueler.PLZ;
-            textBox5.Text = EinSchueler.Ort;
-            textBox6.Text = EinSchueler.Telefon;
-            textBox8.Text = EinSchueler.GebDatum.ToShortDateString();
+                textBox1.Text = EinSchueler.Name;
+                textBox2.Text = EinSchueler.Vorname;
+                textBox3.Text = EinSchueler.Strasse;
+                textBox7.Text = EinSchueler.Hausnummer;
+                textBox4.Text = EinSchueler.PLZ;
+                textBox5.Text = EinSchueler.Ort;
+                textBox6.Text = EinSchueler.Telefon;
+                textBox8.Text = EinSchueler.GebDatum.ToShortDateString();
+            }
         }
 
+
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void liwSchueler_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

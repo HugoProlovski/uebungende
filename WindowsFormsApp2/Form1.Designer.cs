@@ -77,6 +77,7 @@ namespace WindowsFormsApp2
             this.liwSchueler.TabIndex = 0;
             this.liwSchueler.UseCompatibleStateImageBehavior = false;
             this.liwSchueler.View = System.Windows.Forms.View.Details;
+            this.liwSchueler.SelectedIndexChanged += new System.EventHandler(this.liwSchueler_Click);
             // 
             // Name
             // 

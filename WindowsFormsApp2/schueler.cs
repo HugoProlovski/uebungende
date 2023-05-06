@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
-    class schueler
+    class Schueler
     {
         private string sName;
         private string sVorname;
@@ -17,7 +17,7 @@ namespace WindowsFormsApp2
         private string sTelefon;
         private DateTime dtGebDatum;
 
-        public schueler(string aName, string aVorname, string aStrasse, string aHNr, string aPLZ, string aOrt, string aTelefon, DateTime aGebDatum)
+        public Schueler(string aName, string aVorname, string aStrasse, string aHNr, string aPLZ, string aOrt, string aTelefon, DateTime aGebDatum)
            {
             this.sName = aName;
             this.sVorname = aVorname;
